@@ -12,8 +12,7 @@ func _process(delta):
 
 
 func _on_start_button_pressed():
-	pass
-	#get_tree().change_scene_to_file(#SCENE LINK)
+	get_tree().change_scene_to_file("res://scenes/buying_bread.tscn")
 
 
 func _on_options_button_pressed():
@@ -22,7 +21,7 @@ func _on_options_button_pressed():
 	#get_tree().current_scene.add_child(options)
 
 func _on_credits_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/creditos.tscn")
 
 func _on_extras_button_pressed():
 	pass # Replace with function body.

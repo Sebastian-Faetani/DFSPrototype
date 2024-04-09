@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://wonhsng57u5e"]
+
+[ext_resource type="Texture2D" uid="uid://b6tm1ejjv20d7" path="res://assets/MenuBackgroundDFS.png" id="1_r6kai"]
+[ext_resource type="Script" path="res://scenes/creditos.gd" id="1_vdkds"]
+[ext_resource type="FontFile" uid="uid://6i3qk2nc1n38" path="res://assets/GladlyAcceptRegular-Wyjov.ttf" id="2_sbjw1"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdkds")
+
+[node name="MenuBackgroundDfs" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_r6kai")
+
+[node name="Sebas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 259.0
+offset_right = 918.0
+offset_bottom = 292.0
+theme_override_fonts/font = ExtResource("2_sbjw1")
+text = "Programador
+Sebastian Faetani"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 534.0
+offset_right = 216.0
+offset_bottom = 570.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.00784314, 0.513726, 0.568627, 1)
+theme_override_fonts/font = ExtResource("2_sbjw1")
+theme_override_font_sizes/font_size = 30
+text = "Volver"
+flat = true
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhh1kxr8uil6y"]
+
+[ext_resource type="Texture2D" uid="uid://65e08yt642bh" path="res://assets/BreadSeller.png" id="1_mimcg"]
+[ext_resource type="Script" path="res://scenes/buying_bread.gd" id="1_t3prm"]
+[ext_resource type="Texture2D" uid="uid://du5eojqnx6rev" path="res://assets/BadBread.png" id="2_4fxhy"]
+[ext_resource type="Texture2D" uid="uid://ceudkn10uhqyt" path="res://assets/SelectedBadBread.png" id="3_an6gx"]
+[ext_resource type="Texture2D" uid="uid://dvean61ya838c" path="res://assets/MediumBread.png" id="4_ourql"]
+[ext_resource type="Texture2D" uid="uid://bf6arocwoahkn" path="res://assets/SelectedMediumBread.png" id="5_oy4s1"]
+[ext_resource type="Texture2D" uid="uid://cwbgjfw8i20dn" path="res://assets/GodlyBread.png" id="6_6d5l0"]
+[ext_resource type="Texture2D" uid="uid://cmtsuyykecp8w" path="res://assets/SelectedGodlyBread.png" id="7_0jx6r"]
+
+[node name="BuyingBread" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t3prm")
+
+[node name="BreadSeller" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_mimcg")
+
+[node name="BadBread" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 190.0
+offset_right = 450.0
+offset_bottom = 302.0
+focus_neighbor_left = NodePath("../GodlyBread")
+texture_normal = ExtResource("2_4fxhy")
+texture_pressed = ExtResource("3_an6gx")
+texture_hover = ExtResource("3_an6gx")
+texture_focused = ExtResource("3_an6gx")
+
+[node name="MediumBread" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 197.0
+offset_right = 649.0
+offset_bottom = 309.0
+texture_normal = ExtResource("4_ourql")
+texture_pressed = ExtResource("5_oy4s1")
+texture_hover = ExtResource("5_oy4s1")
+texture_focused = ExtResource("5_oy4s1")
+
+[node name="GodlyBread" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 182.0
+offset_right = 859.0
+offset_bottom = 294.0
+focus_neighbor_right = NodePath("../BadBread")
+texture_normal = ExtResource("6_6d5l0")
+texture_pressed = ExtResource("7_0jx6r")
+texture_hover = ExtResource("7_0jx6r")
+texture_focused = ExtResource("7_0jx6r")
